@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #4e73df;
+}
+
+.container{
+    max-width: 400px;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0.4rem;
+
+    background-color: #FFF;
+    padding: 1.4rem;
+    z-index: 100;
+}
+
+.container img{
+    width: 100px;
+    height: auto;
+}
+
+.container h2{
+    margin: 1.8rem 0;
+    font-weight: 400;
+}
+
+.container .input-form{
+    width: 100%; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .input-form > input[type="text"]{
+    width: 100%;
+    padding: 0.8rem 0.8rem;
+    border-radius: 1.8rem;
+    border: 1px solid #777;
+    outline: none;
+    margin: 0.4rem;
+    transition: 0.4s;
+    color: #6e707e;
+}
+
+.container .input-form > input[type="text"]:focus{    
+    color: #6e707e;
+    background-color: #fff;
+    border-color: #bac8f3;
+    box-shadow: 0 0 0 0.2rem #bac8f3cc;
+}
+
+.container .input-form .input-group-password{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container .input-form .input-group-password input[type="text"],
+.container .input-form .input-group-password input[type="password"]{
+    width: 100%;
+    height: 48px;
+    padding: 0.8rem 0.8rem;
+    border-radius: 1.8rem 0 0 1.8rem;
+    border: 1px solid #777;
+    outline: none;
+    transition: 0.4s;
+    color: #6e707e;
+}
+
+.container .input-form .input-group-password input[type="text"]:focus,
+.container .input-form .input-group-password input[type="password"]:focus{
+    color: #6e707e;
+    background-color: #fff;
+    border-color: #bac8f3;
+    box-shadow: 0 0 0 0.2rem #bac8f3cc;
+}
+
+.container .input-form .input-group-password button{
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    border-radius: 0 1.8rem 1.8rem 0;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    color: #FFF;
+    background-color: #4e73df;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .input-form .input-group-password button.showPassword{
+    background-image: url("./images/eye.png");
+    background-position: center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+.container .input-form .input-group-password button.showPassword.can-see{
+    background-image: url("./images/eye-no.png");
+    background-position: center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+
+
+.container .input-form .input-group{    
+    padding: 0.8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container .input-form .input-group input{
+    margin-right: 0.4rem;
+}
+
+.container .input-form button{
+    width: 100%;
+    padding: 0.8rem 0.8rem;
+    border-radius: 1.8rem;
+    outline: none;
+    border: none;
+    margin: 0.8rem;
+    transition: 0.3s;
+    color: #FFF;
+    background-color: #4e73df;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover{
+    filter:brightness(1.2)
+}
+
+button:active{
+    filter:brightness(0.8)
+}
+
+.container a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 12px;
+    color: #4e73df;
+}
+
+
+/* Add Cat Login Animated CSS */
+.cat{
+    width: 211px;
+    height: 109px;
+    background-image: url("./images/cat.png");
+    position: relative;
+}
+.hand{
+    width: 35px;
+    height: 23px;
+    background-image: url("./images/cat-hand.png");
+    position: absolute;
+    transform: scale(1);
+    left: 26px;
+    bottom: -8px;
+    transition: 0.3s ease-in-out;
+    z-index: 1000;
+}
+.hand-r{
+    width: 35px;
+    height: 23px;
+    background-image: url("./images/cat-hand.png");
+    position: absolute;
+    transform: scale(1);
+    right: 26px;
+    bottom: -8px;
+    transition: 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.hand.password {
+    opacity: 0;
+    z-index: 0;
+    transform: translateX(30px) translateY(-25px) scale(0.5);
+}   
+.hand-r.password {
+    opacity: 0;
+    z-index: 0;
+    transform: translateX(-25px) translateY(-30px) scale(0.5);
+}   
+.hand-r.password.can-see {
+    opacity: 1;
+    z-index: 1000;
+    transform:scale(1);
+}
+
+.arms{
+    position: absolute;
+    top: 46px;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.arm{
+    width: 40px;
+    height: 65px;
+    background-image: url("./images/cat-arm-2.png");
+    position: absolute;
+    left: 22px;
+    top: 100px;
+    transition: 0.3s ease-in-out;
+}
+
+.arm-r{
+    width: 40px;
+    height: 65px;
+    background-image: url("./images/cat-arm-2.png");
+    position: absolute;
+    right: 22px;
+    top: 100px;
+    transition: 0.3s ease-in-out;
+}
+
+.arm.password{
+  transform: translateX(40px) translateY(-10px);
+  top: 10px;
+}
+
+.arm-r.password{
+  transform: translateX(-40px) translateY(-10px) scaleX(-1);
+  top: 10px;
+}
+
+.arm-r.password.can-see{
+  transform: translateX(-40px) translateY(100px) scaleX(-1);
+  top: 10px;
+}
